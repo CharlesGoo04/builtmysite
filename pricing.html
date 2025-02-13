@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - Your Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .pricing-hero {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #fff 50%, #f0f0f0 50%);
+        }
+
+        .pricing-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .pricing-hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 2rem;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .features li {
+            padding: 0.5rem 0;
+            color: #666;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Contact dropdown styles */
+        .contact-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            top: 100%;
+            left: -1rem;
+        }
+
+        .contact-dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .dropdown-content::before {
+            content: '';
+            position: absolute;
+            top: -1rem;
+            left: 0;
+            right: 0;
+            height: 1rem;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin: 0;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
+            padding-left: 20px;
+        }
+
+        .dropdown-content i {
+            margin-right: 8px;
+            width: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Home.html" class="logo">BuildMySite</a>
+            <div class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="pricing.html">Pricing</a>
+                <div class="contact-dropdown">
+                    <a href="#contact">Contact</a>
+                    <div class="dropdown-content">
+                        <a href="https://wa.me/601110890755" target="_blank">
+                            <i class="fab fa-whatsapp"></i>WhatsApp
+                        </a>
+                        <a href="https://t.me/601110890755" target="_blank">
+                            <i class="fab fa-telegram"></i>Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="pricing-hero">
+        <h1>Pricing Plans</h1>
+        <p>Choose the perfect plan for your needs</p>
+    </section>
+
+    <div class="pricing-container">
+        <div class="pricing-card">
+            <h2>Basic</h2>
+            <div class="price">RM1999<span>/project</span></div>
+            <ul class="features">
+                <li>5 Pages Website</li>
+                <li>Basic website templates</li>
+                <li>Basic SEO</li>
+                <li>Contact Form</li>
+                <li>2 Revisions</li>
+            </ul>
+        </div>
+
+        <div class="pricing-card">
+            <h2>Professional</h2>
+            <div class="price">RM3599<span>/project</span></div>
+            <ul class="features">
+                <li>10 Pages Website</li>
+                <li>Customizable website templates</li>
+                <li>Advanced SEO</li>
+                <li>Contact Form</li>
+                <li>5 Revisions</li>
+                <li>FAQS</li>
+                <li>Social Media Features</li>
+                <li>Google Map Features</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html> 
